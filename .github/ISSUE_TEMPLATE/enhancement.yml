@@ -1,0 +1,41 @@
+name: Enhancement
+description: A new feature or improvement that fits in one issue.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Write the title as the expected outcome, not as the task.
+        Work with several steps is an iteration: use the Iteration form.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why this is needed and where the need came from.
+    validations:
+      required: true
+  - type: textarea
+    id: todo
+    attributes:
+      label: What to do
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+    validations:
+      required: false
+  - type: textarea
+    id: related
+    attributes:
+      label: Related issues
+      description: For example, the parent issue of an iteration (#N).
+    validations:
+      required: false
+  - type: textarea
+    id: done-criteria
+    attributes:
+      label: Done when
+    validations:
+      required: true
