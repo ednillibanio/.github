@@ -1,0 +1,42 @@
+name: Standard
+description: Apply an engineering standard to this repository.
+labels: [standard]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this to adopt or adjust a documented standard (workflow, CI,
+        security, tooling). Link the document that defines it.
+  - type: input
+    id: standard-doc
+    attributes:
+      label: Standard
+      description: Link or path to the document that defines the standard.
+    validations:
+      required: true
+  - type: input
+    id: parent-issue
+    attributes:
+      label: Parent issue
+      placeholder: "#N"
+    validations:
+      required: false
+  - type: textarea
+    id: todo
+    attributes:
+      label: What to do
+    validations:
+      required: true
+  - type: textarea
+    id: done-criteria
+    attributes:
+      label: Done when
+    validations:
+      required: true
+  - type: textarea
+    id: repo-notes
+    attributes:
+      label: Notes for this repository
+      description: What is specific to this repository. Leave blank if nothing.
+    validations:
+      required: false
