@@ -1,0 +1,42 @@
+name: Iteration
+description: Parent issue of an iteration planned in iterations/.
+title: "[NNN] "
+labels: [iteration]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One issue per iteration, never one per step. The files in
+        `iterations/NNN-topic/` are the source of truth; this issue mirrors
+        the steps table. Open it only after the iteration proposal is approved.
+  - type: input
+    id: plan-path
+    attributes:
+      label: Iteration plan
+      placeholder: iterations/NNN-topic/
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: The expected outcome, in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: Mirror the steps table. The issue stays open until the last step lands.
+      value: |
+        - [ ] 01:
+        - [ ] 02:
+    validations:
+      required: true
+  - type: input
+    id: base-branch
+    attributes:
+      label: Integration branch
+      placeholder: dev
+    validations:
+      required: true
