@@ -1,0 +1,49 @@
+name: Bug
+description: A defect in existing behavior.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for something that worked, or should work, and does not.
+        New features and improvements go in the Enhancement form.
+        Do not paste secrets, passwords, tokens or personal data.
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What happened, including the error message when there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      description: Steps, environment (local, staging, production) and version or commit.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and output
+      description: Relevant excerpts, without secrets.
+      render: shell
+    validations:
+      required: false
+  - type: textarea
+    id: done-criteria
+    attributes:
+      label: Done when
+      description: How to tell the defect is fixed.
+    validations:
+      required: true
